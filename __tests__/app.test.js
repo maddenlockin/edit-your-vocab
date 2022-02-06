@@ -27,6 +27,14 @@ describe('vocab-api routes', () => {
     });
   });
 
+  it('gets all words', async () => {
+    return request(app)
+      .get('/api/v1/words')
+      .then((res) => {
+        expect(res.body).toEqual(expect.any(Array));
+      });
+  });
+
   afterAll(() => {
     pool.end();
   });

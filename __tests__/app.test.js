@@ -35,6 +35,22 @@ describe('vocab-api routes', () => {
       });
   });
 
+  it('gets a word by id', async () => {
+    return request(app)
+      .get('/api/v1/words/1')
+      .then((res) => {
+        expect(res.body).toEqual({
+          id: '1',
+          word: 'dumb',
+          aka: null,
+          definition: 'unable to speak',
+          reason: 'deaf and dumb',
+          origin: '',
+          alternatives: '',
+        });
+      });
+  });
+
   afterAll(() => {
     pool.end();
   });

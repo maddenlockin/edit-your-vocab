@@ -25,7 +25,7 @@ describe('vocab-api routes', () => {
     });
   });
 
-  xit('gets all words', async () => {
+  it('gets all words', async () => {
     return request(app)
       .get('/api/v1/words')
       .then((res) => {

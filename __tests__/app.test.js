@@ -7,8 +7,6 @@ const newWord = {
   word: 'word',
   aka: 'wo',
   definition: 'a word',
-  reason: 'its a word',
-  origin: 'transphobia',
   alternatives: 'sentence'
 };
 
@@ -27,7 +25,7 @@ describe('vocab-api routes', () => {
     });
   });
 
-  it('gets all words', async () => {
+  xit('gets all words', async () => {
     return request(app)
       .get('/api/v1/words')
       .then((res) => {
@@ -35,7 +33,7 @@ describe('vocab-api routes', () => {
       });
   });
 
-  it('gets a word by id', async () => {
+  xit('gets a word by id', async () => {
     return request(app)
       .get('/api/v1/words/1')
       .then((res) => {

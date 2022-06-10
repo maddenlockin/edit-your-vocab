@@ -33,7 +33,7 @@ describe('vocab-api routes', () => {
       });
   });
 
-  xit('gets a word by id', async () => {
+  it('gets a word by id', async () => {
     return request(app)
       .get('/api/v1/words/1')
       .then((res) => {
@@ -42,9 +42,7 @@ describe('vocab-api routes', () => {
           word: 'dumb',
           aka: null,
           definition: 'unable to speak',
-          reason: 'deaf and dumb',
-          origin: '',
-          alternatives: '',
+          alternatives: null
         });
       });
   });

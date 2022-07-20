@@ -47,6 +47,15 @@ describe('vocab-api routes', () => {
       });
   });
 
+  it('sorts words alphabetically', async () => {
+    return request(app)
+      .get('/api/v1/words')
+      .sort()
+      .then((res) => {
+        expect(res.body).toEqual(expect.any(Array));
+      });
+  });
+
   afterAll(() => {
     pool.end();
   });
